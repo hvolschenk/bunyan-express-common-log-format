@@ -4,6 +4,7 @@
   "description": "A `Common Log Format` serializer for ExpressJS applications using bunyan",
   "main": "src/index.js",
   "scripts": {
+    "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
     "semantic-release": "semantic-release",
     "test": "npm run test:lint && npm run test:vulnerabilities && npm run test:scripts",
     "test:lint": "eslint --ext js .",
@@ -33,6 +34,7 @@
   },
   "homepage": "https://github.com/hvolschenk/bunyan-express-common-log-format#readme",
   "devDependencies": {
+    "coveralls": "^3.0.2",
     "eslint": "^5.6.1",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
