@@ -1,4 +1,5 @@
-const formatDate = require('./format-date');
+const dateFormat = require('dateformat');
+
 const response = require('./index');
 
 test('Adds a default value for everything except \'httpVersion\', \'method\' and \'url\'', () => {
@@ -20,9 +21,9 @@ test('Adds all values to the serializer properly', () => {
   const HTTP_VERSION = 'HTTP_VERSION';
   const IDENT = 'IDENT';
   const METHOD = 'METHOD';
-  const STATUS_CODE = 'STATUC_CODE';
+  const STATUS_CODE = 'STATUS_CODE';
   const URL = 'URL';
-  const expected = `${HOST} ${IDENT} ${AUTH_USER} [${formatDate(DATE)}] `
+  const expected = `${HOST} ${IDENT} ${AUTH_USER} [${dateFormat(DATE, 'dd/mmm/yyyy:hh:MM:ss o')}] `
     + `"${METHOD} ${URL} HTTP/${HTTP_VERSION}" ${STATUS_CODE} ${CONTENT_LENGTH}`;
 
   const actual = response({

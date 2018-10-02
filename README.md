@@ -45,7 +45,7 @@ app.get(/* ... */);
 
 // define the logging middleware
 app.use((request, response, next) => {
-  logger.info({ response: { ...request, ...response  } });
+  logger.info({ response: { ...request, ...response, date: new Date()  } });
   next();
 });
 ```
