@@ -45,7 +45,19 @@ app.get(/* ... */);
 
 // define the logging middleware
 app.use((request, response, next) => {
-  logger.info({ response: { ...request, ...response, date: new Date()  } });
+  logger.info(
+    {
+      response: {
+        contentLength: response.get('Content-Length'),
+        date: new Date(),
+        host: request.headers.host,
+        httpVersion: request.httpVersion,
+        method: request.method,
+        statusCode: response.statusCode,
+        url: request.originalUrl,
+      },
+    },
+  );
   next();
-});
+};);
 ```
