@@ -1,0 +1,12 @@
+{
+  "env": {
+    "jest": true
+  },
+  "extends": "airbnb-base",
+  "rules": {
+    "implicit-arrow-linebreak": "off",
+    "linebreak-style": "off",
+    "object-curly-newline": ["error", { "consistent": true }],
+    "camelcase": "off"
+  }
+}

@@ -1,0 +1,6 @@
+.config/
+.node-gyp/
+.npm/
+
+coverage/
+node_modules/

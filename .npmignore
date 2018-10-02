@@ -1,0 +1,13 @@
+.config/
+.git/
+.npm/
+
+coverage/
+node_modules/
+
+.gitignore
+.npmignore
+.travis.yml
+
+docker-compose.yml
+Dockerfile

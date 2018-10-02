@@ -1,0 +1,42 @@
+{
+  "name": "bunyan-express-common-log-format",
+  "version": "0.0.0-development",
+  "description": "A `Common Log Format` serializer for ExpressJS applications using bunyan",
+  "main": "src/index.js",
+  "scripts": {
+    "semantic-release": "semantic-release",
+    "test": "npm run test:lint && npm run test:vulnerabilities && npm run test:scripts",
+    "test:lint": "eslint --ext js .",
+    "test:scripts": "NODE_ENV=test jest --coverage",
+    "test:vulnerabilities": "npm audit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hvolschenk/bunyan-express-common-log-format.git"
+  },
+  "keywords": [
+    "ExpressJS",
+    "Bunyan",
+    "Log",
+    "Logging",
+    "Common",
+    "Log",
+    "Format"
+  ],
+  "author": {
+    "email": "righteous.trespasser@gmail.com",
+    "name": "Hendrik Volschenk"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hvolschenk/bunyan-express-common-log-format/issues"
+  },
+  "homepage": "https://github.com/hvolschenk/bunyan-express-common-log-format#readme",
+  "devDependencies": {
+    "eslint": "^5.6.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "jest": "^23.6.0",
+    "semantic-release": "^15.9.16"
+  }
+}
