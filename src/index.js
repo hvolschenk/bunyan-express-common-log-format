@@ -1,4 +1,6 @@
-const formatDate = require('./format-date');
+const dateFormat = require('dateformat');
+
+const formatDate = date => dateFormat(date, 'dd/mmm/yyyy:hh:MM:ss o');
 
 module.exports = ({
   authUser = '-',
