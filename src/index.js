@@ -1,16 +1,19 @@
-const dateFormat = require('dateformat');
+const formatDate = require('./format-date');
+const parseExpressOptions = require('./parse-express-options');
 
-const formatDate = date => dateFormat(date, 'dd/mmm/yyyy:hh:MM:ss o');
-
-module.exports = ({
-  authUser = '-',
-  contentLength = '-',
-  date = '-',
-  host = '-',
-  httpVersion,
-  ident = '-',
-  method,
-  statusCode = '-',
-  url,
-}) => `${host} ${ident} ${authUser} [${date === '-' ? '-' : formatDate(date)}] "${method} ${url} `
-  + `HTTP/${httpVersion}" ${statusCode} ${contentLength}`;
+module.exports = ({ overrides, request, response, settings = {} }) => {
+  const {
+    authUser = '-',
+    contentLength = '-',
+    date,
+    host = '-',
+    httpVersion,
+    ident = '-',
+    method,
+    statusCode = '-',
+    url,
+  } = parseExpressOptions({ request, response }, overrides);
+  return `${host} ${ident} ${authUser} `
+    + `[${formatDate(date, settings.dateFormat)}] "${method} ${url} `
+    + `HTTP/${httpVersion}" ${statusCode} ${contentLength}`;
+};
