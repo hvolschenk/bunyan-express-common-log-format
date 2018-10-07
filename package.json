@@ -2,13 +2,14 @@
   "name": "bunyan-express-common-log-format",
   "version": "0.0.0-development",
   "description": "A `Common Log Format` serializer for ExpressJS applications using bunyan",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
+    "build:production": "babel src --out-dir lib --ignore src/**/*.test.js",
     "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
     "semantic-release": "semantic-release",
     "test": "npm run test:lint && npm run test:vulnerabilities && npm run test:scripts",
     "test:lint": "eslint --ext js .",
-    "test:scripts": "NODE_ENV=test jest --coverage",
+    "test:scripts": "NODE_ENV=test jest --config ./jest.config.json --coverage",
     "test:vulnerabilities": "npm audit"
   },
   "repository": {
@@ -34,6 +35,11 @@
   },
   "homepage": "https://github.com/hvolschenk/bunyan-express-common-log-format#readme",
   "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
     "coveralls": "^3.0.2",
     "eslint": "^5.6.1",
     "eslint-config-airbnb-base": "^13.1.0",

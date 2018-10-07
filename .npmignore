@@ -3,11 +3,17 @@
 .npm/
 
 coverage/
+jest_modules/
 node_modules/
+src/
 
+.ash_history
+.eslintignore
+.eslintrc
 .gitignore
 .npmignore
 .travis.yml
 
+babel.config.js
 docker-compose.yml
 Dockerfile
