@@ -45,7 +45,7 @@
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
     "jest": "^23.6.0",
-    "semantic-release": "^15.9.16"
+    "semantic-release": "^15.9.17"
   },
   "dependencies": {
     "dateformat": "^3.0.3"
