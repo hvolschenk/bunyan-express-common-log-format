@@ -3,14 +3,16 @@
   "version": "0.0.0-development",
   "description": "A `Common Log Format` serializer for ExpressJS applications using bunyan",
   "main": "lib/index.js",
+  "files": ["/lib"],
   "scripts": {
-    "build:production": "babel src --out-dir lib --ignore src/**/*.test.js",
+    "build": "babel src --out-dir lib --ignore src/**/*.test.js",
     "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
     "semantic-release": "semantic-release",
     "test": "npm run test:lint && npm run test:vulnerabilities && npm run test:scripts",
     "test:lint": "eslint --ext js .",
     "test:scripts": "NODE_ENV=test jest --config ./jest.config.json --coverage",
-    "test:vulnerabilities": "npm audit"
+    "test:vulnerabilities": "npm audit",
+    "travis-deploy-once": "travis-deploy-once"
   },
   "repository": {
     "type": "git",
@@ -35,17 +37,18 @@
   },
   "homepage": "https://github.com/hvolschenk/bunyan-express-common-log-format#readme",
   "devDependencies": {
-    "@babel/cli": "^7.1.2",
-    "@babel/core": "^7.1.2",
-    "@babel/preset-env": "^7.1.0",
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
     "coveralls": "^3.0.2",
-    "eslint": "^5.6.1",
+    "eslint": "^5.10.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
     "jest": "^23.6.0",
-    "semantic-release": "^15.9.17"
+    "semantic-release": "^15.12.4",
+    "travis-deploy-once": "^5.0.9"
   },
   "dependencies": {
     "dateformat": "^3.0.3"
