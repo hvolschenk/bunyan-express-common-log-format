@@ -3,7 +3,9 @@
   "version": "0.0.0-development",
   "description": "A `Common Log Format` serializer for ExpressJS applications using bunyan",
   "main": "lib/index.js",
-  "files": ["/lib"],
+  "files": [
+    "/lib"
+  ],
   "scripts": {
     "build": "babel src --out-dir lib --ignore src/**/*.test.js",
     "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
