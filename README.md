@@ -1,5 +1,9 @@
 # bunyan-express-common-log-format
 
+[![Build Status](https://travis-ci.org/hvolschenk/bunyan-express-common-log-format.svg?branch=master)](https://travis-ci.org/hvolschenk/bunyan-express-common-log-format)
+[![Coverage Status](https://coveralls.io/repos/github/hvolschenk/bunyan-express-common-log-format/badge.svg?branch=master)](https://coveralls.io/github/hvolschenk/bunyan-express-common-log-format?branch=master)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+
 [Bunyan](https://github.com/trentm/node-bunyan)
 [Common Log Format](https://en.wikipedia.org/wiki/Common_Log_Format) serializer for
 [ExpressJS](https://expressjs.com/) applications.
