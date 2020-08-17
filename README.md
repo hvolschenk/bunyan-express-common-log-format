@@ -8,17 +8,30 @@
 [Common Log Format](https://en.wikipedia.org/wiki/Common_Log_Format) serializer for
 [ExpressJS](https://expressjs.com/) applications.
 
+* [Setup][]
+  * [Installation][]
+  * [Adding the serializer][]
+* [Usage][]
+  * [Basic usage][]
+  * [Overrides][]
+  * [Settings][]
+
+---
+
 ## Setup
+[Setup]: #setup
 
-### _Setup >_ Installation
+### Installation
+[Installation]: #installation
 
-Install this package through `npm`/`yarn`:
+Install this package through `npm`:
 
 ```sh
 $ npm i -S bunyan-express-common-log-format
 ```
 
-### _Setup >_ Adding the serializer
+### Adding the serializer
+[Adding the serializer]: #adding-the-serializer
 
 Add the formatter as a serializer to the bunyan configuration:
 
@@ -35,11 +48,13 @@ module.exports = logger;
 ```
 
 ## Usage
+[Usage]: #usage
 
 Once the formatter is installed and the serializer is set-up, use it with a normal log call, using
 the key used during bunyan setup (`apiCall` in the example):
 
 ### Basic usage
+[Basic usage]: #basic-usage
 
 ```js
 const express = require('express');
@@ -59,6 +74,7 @@ app.use((request, response, next) => {
 ```
 
 ### Overrides
+[Overrides]: #overrides
 
 The serializer will do it's best to extract the necessary information from the given `request` and
 `response` objects, except for `authUser` and `ident`, which are currently not extracted. All fields
@@ -91,6 +107,7 @@ app.use((request, response, next) => {
 ```
 
 ### Settings
+[Settings]: #settings
 
 Pass a `settings` object to change settings of the serializer. The available settings are:
 
