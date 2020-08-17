@@ -13,8 +13,7 @@
     "test": "npm run test:lint && npm run test:vulnerabilities && npm run test:scripts",
     "test:lint": "eslint --ext js .",
     "test:scripts": "NODE_ENV=test jest --config ./jest.config.json --coverage",
-    "test:vulnerabilities": "npm audit --production",
-    "travis-deploy-once": "travis-deploy-once"
+    "test:vulnerabilities": "npm audit --production"
   },
   "repository": {
     "type": "git",
@@ -39,18 +38,17 @@
   },
   "homepage": "https://github.com/hvolschenk/bunyan-express-common-log-format#readme",
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.8.6",
-    "@babel/preset-env": "^7.8.6",
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
     "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "^25.1.0",
-    "coveralls": "^3.0.9",
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.20.1",
-    "jest": "^25.1.0",
-    "semantic-release": "^17.0.4",
-    "travis-deploy-once": "^5.0.11"
+    "babel-jest": "^26.3.0",
+    "coveralls": "^3.1.0",
+    "eslint": "^7.7.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "jest": "^26.4.0",
+    "semantic-release": "^17.1.1"
   },
   "dependencies": {
     "dateformat": "^3.0.3"
