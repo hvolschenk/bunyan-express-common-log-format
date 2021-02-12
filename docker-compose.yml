@@ -4,4 +4,5 @@ services:
     build: "./"
     command: ["npm", "test"]
     volumes:
-      - ./:/home/node/app:delegated
+      - ./:/home/node/application/app:delegated
+      - /home/node/application/app/node_modules/
