@@ -38,19 +38,19 @@
   },
   "homepage": "https://github.com/hvolschenk/bunyan-express-common-log-format#readme",
   "devDependencies": {
-    "@babel/cli": "^7.10.5",
-    "@babel/core": "^7.11.1",
-    "@babel/preset-env": "^7.11.0",
-    "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "^26.3.0",
+    "@babel/cli": "^7.12.16",
+    "@babel/core": "^7.12.16",
+    "@babel/preset-env": "^7.12.16",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^26.6.3",
     "coveralls": "^3.1.0",
-    "eslint": "^7.7.0",
-    "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-plugin-import": "^2.22.0",
-    "jest": "^26.4.0",
-    "semantic-release": "^17.1.1"
+    "eslint": "^7.19.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "jest": "^26.6.3",
+    "semantic-release": "^17.3.8"
   },
   "dependencies": {
-    "dateformat": "^3.0.3"
+    "dateformat": "^4.5.1"
   }
 }
